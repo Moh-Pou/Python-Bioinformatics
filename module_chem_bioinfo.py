@@ -1,4 +1,4 @@
-"This is a module containing functions related to bioinformatics."
+"This is a module containing functions related to computational chemistry and bioinformatics."
 
 def fix_protein(protein):
         #Delete all invalid amino acid characters from a protein sequence (a string in between quotation marks) and return the corrected sequence (a string).
