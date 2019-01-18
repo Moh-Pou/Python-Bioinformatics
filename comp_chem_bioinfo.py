@@ -1,7 +1,7 @@
-"This is a module containing functions related to computational chemistry and bioinformatics."
+"This is a module containing functions related to bioinformatics."
 
 def fix_protein(protein):
-        #Delete all invalid amino acid characters from a protein secuence (a string in between quotation marks) and return the corrected sequence (a string).
+        #Delete all invalid amino acid characters from a protein sequence (a string in between quotation marks) and return the corrected sequence (a string).
         protein=protein.rstrip()        #remove \n 
         protein=protein.upper()         #make the string uppercase
         protein=protein.replace(" ","") #remove spaces in between the characters 
@@ -21,7 +21,7 @@ def one_lett_to_three_lett(one_letter):
         'P':'PRO','A':'ALA','V':'VAL','I':'ILE','L':'LEU','M':'MET',
         'F':'PHE','Y':'TYR','W':'TRP'}
         three_letter=[aa[i] for i in list_one_letter] #a list
-        three_letter=' '.join(three_letter)   #a string of amino acids separeted by space
+        three_letter=' '.join(three_letter)   #a string of amino acids separated by space
         return(three_letter)
 
 def has_stop_codon(dna,frame):
@@ -40,7 +40,7 @@ def reverse(string):
 	return string[::-1]
 
 def complement(dna):
-	#Find the complement of a DNA secuence. The input and output are strings.
+	#Find the complement of a DNA sequence. The input and output are strings.
 	basecomplement={'A':'T','C':'G','N':'N','T':'A','G':'C','a':'t','c':'g','n':'n','t':'a','g':'c'}
 	letters=list(dna)
 	letters=[basecomplement[base] for base in letters]
@@ -64,7 +64,7 @@ def read_fasta(myfile):
 	                        words=line.split()
 	                        name=words[0][1:]
 	                        seqs[name]=''
-	                else: #sequence, not header
+	                else: #sequence, not hea:qder
 	                        seqs[name]=seqs[name]+line
 	f.close()
 	return seqs
