@@ -1,4 +1,3 @@
-import dnautil
 import sys
 import getopt
 
