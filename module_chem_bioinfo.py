@@ -64,7 +64,7 @@ def read_fasta(myfile):
 	                        words=line.split()
 	                        name=words[0][1:]
 	                        seqs[name]=''
-	                else: #sequence, not hea:qder
+	                else: #sequence, not header
 	                        seqs[name]=seqs[name]+line
 	f.close()
 	return seqs
